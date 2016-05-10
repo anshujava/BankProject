@@ -1,0 +1,118 @@
+BODY
+{
+
+	BACKGROUND-COLOR: #efefef;
+	
+}
+
+.userTable
+{
+    BACKGROUND-COLOR: #cdedff;
+}
+
+.head1
+{
+    BACKGROUND-COLOR: #006699;
+    COLOR: navy;
+    FONT-SIZE: x-large;
+    TEXT-TRANSFORM: capitalize
+}
+
+INPUT
+{
+    BACKGROUND-COLOR: #ffffff;
+    FONT-FAMILY: Century
+}
+
+
+TEXTAREA
+{
+    BACKGROUND-COLOR: white;
+    FONT-FAMILY: Century
+}
+
+.rad{
+	BACKGROUND-COLOR: #e5f1ff;
+}
+
+a:visited#visitLink
+{
+    COLOR:blue;
+}
+SELECT
+{
+    BACKGROUND-COLOR: #ffffff;
+    FONT-FAMILY: 'Book Antiqua'
+}
+FIELDSET
+{
+	font-weight: bold;
+}
+
+THEAD
+{
+	BACKGROUND-COLOR: #006699;
+	font-weight: bold;
+	color: white;
+	font-size: 18;
+	font-family:'Century';
+	border: none;
+}
+.tdlbl
+{
+font-weight: bold;
+}
+
+.tr1
+{
+	BACKGROUND-COLOR: #0000b4;
+	font-weight: bold;
+	font-size:medium;
+	color: white;
+}
+
+TABLE
+{
+	
+	BACKGROUND-COLOR:#efefef;
+    border-color: black;
+    border-left-color:black;
+    border-right-color:black;
+    border-top-color:black;
+    border-bottom-color:black; 
+}
+
+BUTTON
+{
+	BACKGROUND-COLOR:lightgray;
+    border-width: medium;
+	border-style: outset;
+                
+}
+
+TD
+{
+	border: none;
+	border-style: none;
+}
+
+TR
+{
+	border: none;
+	border-style: none;
+}
+
+A
+{
+	color: blue;
+}
+
+.btn
+{
+	BACKGROUND-COLOR: silver;
+	border-color: white;
+	display: table-row-group;
+}
+IFRAME {
+	border-style: none;
+}
