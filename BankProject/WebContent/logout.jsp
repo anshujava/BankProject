@@ -16,7 +16,7 @@ String url = "jdbc:mysql://localhost:3306/";
 String dbName = "test";
 String driver = "com.mysql.jdbc.Driver";
 String username = "root"; 
-String userPassword = "";
+String userPassword = "root";
 Connection conn = null;
 
 Date todaysDate = new java.util.Date();
