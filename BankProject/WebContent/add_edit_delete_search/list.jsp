@@ -50,8 +50,8 @@ function search(){
     </THEAD>
                 <TBODY>
         <TR bgcolor="#d6d6d6" align="left">
-                    
-                    <TD nowrap><FONT size=3 color=green><B>SL No</B></FONT></TD>
+         			<TD nowrap><FONT size=3 color=green><B>SL No</B></FONT></TD>                    
+                    <TD nowrap><FONT size=3 color=green><B>BookId</B></FONT></TD>
                     <TD nowrap><FONT size=3 color=green><B>Book Name</B></FONT></TD>
                     <TD nowrap><FONT size=3 color=green><B>Book Author Name</B></FONT></TD>
                    
@@ -67,9 +67,31 @@ function search(){
                
                  <%   
                
-                Vector vReq1=new Vector();
                 bookDetail bookdet = new bookDetail();
                 String searchInput = request.getParameter("txtSearch");
+                System.out.println("searchInput --" + searchInput);
+                if((searchInput == null) || (searchInput == "null")|| (searchInput == "")){
+                	 Vector vReq=new Vector();
+                     vReq= bookdet.allBookDetailList();
+                     
+                     for(int i=0;i<vReq.size();i++)
+                     {
+                     String temp[]=new String[3];
+                     temp = (String[])vReq.get(i);
+                     
+                         %>	
+                    <TR bgcolor="#d6d6d6">
+                     <TD nowrap><%=i+1%></TD>
+                    <TD nowrap><%=checkNull(temp[0])%></TD>
+                    <TD nowrap><%=checkNull(temp[1])%></TD>
+                    <TD nowrap><%=checkNull(temp[2])%></TD>
+                    <td><input type="button" name="edit" value="Edit" style="background-color:green;font-weight:bold;color:white;" onclick="editRecord(<%=temp[0]%>);" ></td>
+					<td><input type="button" name="delete" value="Delete" style="background-color:red;font-weight:bold;color:white;" onclick="deleteRecord(<%=temp[0]%>);" ></td>
+                   
+                    
+                </TR>
+                <% } }else{
+                Vector vReq1=new Vector();
                 vReq1= bookdet.allBookDetailList(searchInput);
                 
                 for(int i=0;i<vReq1.size();i++)
@@ -79,6 +101,7 @@ function search(){
                
                     %> 
                  <TR bgcolor="#d6d6d6">
+                  <TD nowrap><%=i+1%></TD>
                     <TD nowrap><%=checkNull(temp1[0])%></TD>
                     <TD nowrap><%=checkNull(temp1[1])%></TD>
                     <TD nowrap><%=checkNull(temp1[2])%></TD>
@@ -87,7 +110,7 @@ function search(){
                    
                     
                 </TR>
-                 <%}%>
+                 <%}}%>
                 </TBODY>
     </table>
     </form>
