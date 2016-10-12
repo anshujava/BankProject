@@ -1,7 +1,7 @@
 <% //add edit delete search in a single page%>
 
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1" import="java.util.*,java.sql.*,bean.*"%>
+    pageEncoding="ISO-8859-1" errorPage="./error.jsp" import="java.util.*,java.sql.*,bean.*"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -421,9 +421,9 @@ try {
                 </TR>
                 </TBODY>
     </table>
-        	<%}else{ %>
-        	<table border =1><tr bgcolor="#d6d6d6" align="left"><tr><td><a href='./a_e_d_s.jsp?fn=ShowList'>Click here to go to List page</a></td></tr></table>
-        		<%}%>
+        	<%}else{ 
+        	response.sendRedirect("./a_e_d_s.jsp?fn=ShowList");
+        		}%>
     </form>
 </body>
 </html>
