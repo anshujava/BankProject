@@ -43,6 +43,7 @@ TABLE
     border-right-color:black;
     border-top-color:black;
     border-bottom-color:black; 
+    
 }
 
 BUTTON
@@ -99,14 +100,12 @@ function on_cancel(){
 </head>
 <body >
 <form name=frm method="post" >
- <%   String Querystr = request.getQueryString();
-      System.out.println("queryString="+Querystr);
-       System.out.println("search="+request.getParameter("txtSearch"));%> 
+ <%   String Querystr = request.getQueryString();%> 
     <% 
     if((Querystr!=null)){%> 
     <% 
     if(request.getParameter("fn").equals("ShowList")){%> 
-    <TABLE border =1>
+    <TABLE border =1 align="center">
         <THEAD>
         <tr >
                 <td colspan="16" align="left" ><font size="3">View Details</font></td>
@@ -202,7 +201,7 @@ function on_cancel(){
     	
     %>
    
-    <TABLE border =1>  <THEAD>
+    <TABLE border =1 align="center">  <THEAD>
         <tr >
                 <td colspan="16" align="left" ><font size="3">Add Book Details</font></td>
                 
@@ -251,7 +250,7 @@ try {
   <%  }else if(request.getParameter("fn").equals("edit")){
   %>    
    
-    <TABLE border =1>  <THEAD>
+    <TABLE border =1 align="center">  <THEAD>
         <tr >
                 <td colspan="16" align="left" ><font size="3">Edit Book Details</font></td>
                 
@@ -330,7 +329,7 @@ try {
 	<table border =1 ><tr bgcolor="#d6d6d6" align="left"><tr><td>updated successfully</td><td><a href='./a_e_d_s.jsp?fn=ShowList'>Click here to go to List page</a> </td></tr></table>
 <%}else if(request.getParameter("fn").equals("delete")){
 %>
-<table border =1><tr bgcolor="#d6d6d6" align="left"><tr><td>Deleted Successfully</td><td><a href='./a_e_d_s.jsp?fn=ShowList'>Click here to go to List page</a> </td></tr></table>
+<table border =1 align="center"><tr bgcolor="#d6d6d6" align="left"><tr><td>Deleted Successfully</td><td><a href='./a_e_d_s.jsp?fn=ShowList'>Click here to go to List page</a> </td></tr></table>
         <%
        
         String id=request.getParameter("id");
@@ -348,10 +347,9 @@ try {
         	}  %>  
         	<%}else if(request.getParameter("fn").equals("search")){ %>
         	       <% if((request.getParameter("search")!=null) && !(request.getParameter("search").trim().equalsIgnoreCase(""))){
-        	    	   System.out.println("search");
         	    	   %>
         	        
-        	<TABLE border =1>
+        	<TABLE border =1 align="center">
         <THEAD>
         <tr >
                 <td colspan="16" align="left" ><font size="3">View Details</font></td>
